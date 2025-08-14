@@ -7,7 +7,7 @@ class DataLoader:
     def load_data(self):
         conn = self.connector.get_connection()
         cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM #####")
+        cursor.execute("SELECT * FROM data")
         rows = cursor.fetchall()
 
         self.connector.close_connection()

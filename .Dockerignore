@@ -1,0 +1,6 @@
+.scripts
+.infrastructure
+.venv
+.env
+.gitignore
+README.md

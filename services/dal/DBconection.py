@@ -8,15 +8,10 @@ class DConnector:
     load_dotenv()
 
     def __init__(self):
-        host = os.getenv("#####")
-        user = os.getenv("#####")
-        port_str = os.getenv("#####")
-        password = os.getenv("#####")
-        database = os.getenv("#####")
-        try:
-            port = int(port_str)
-        except (ValueError, TypeError):
-            raise ValueError(f"invalid port : {port_str}.")
+        host = os.getenv("MYSQL_HOST")
+        user = os.getenv("MYSQL_USER")
+        password = os.getenv("MYSQL_PASSWORD")
+        database = os.getenv("MYSQL_DATABASE")
 
         self.conn = mysql.connector.connect(
             host=host,
