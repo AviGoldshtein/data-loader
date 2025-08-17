@@ -1,5 +1,6 @@
 from services.dal.DBconection import DConnector
 
+
 class DataLoader:
     def __init__(self):
         self.connector = DConnector()
@@ -9,6 +10,4 @@ class DataLoader:
         cursor = conn.cursor(dictionary=True)
         cursor.execute("SELECT * FROM data")
         rows = cursor.fetchall()
-
-        self.connector.close_connection()
         return rows
